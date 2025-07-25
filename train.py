@@ -11,7 +11,7 @@ model = YOLO("yolov8l.pt")  # Use yolov8l.pt for even better accuracy if you hav
 
 # Training configuration
 model.train(
-    data="FloorPlan_Project.v1-v1.yolov8/data.yaml",
+    data="planner.v2i.yolov8/data.yaml",
     epochs=300,
     imgsz=768,
     batch=8,
@@ -40,5 +40,5 @@ model.train(
 )
 
 # After training, evaluate on the test set
-metrics = model.val(data="FloorPlan_Project.v1-v1.yolov8/data.yaml", split='test')
+metrics = model.val(data="planner.v2i.yolov8/data.yaml", split='test')
 print(metrics)
