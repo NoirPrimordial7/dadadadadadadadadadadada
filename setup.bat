@@ -30,7 +30,8 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 REM Step 3: Clone the GitHub repository or initialize if not present
-set /p REPO_URL="Enter the GitHub repository URL (or press Enter to skip cloning): "
+set /p REPO_URL="Enter the GitHub repository URL (or press Enter for default: https://github.com/NoirPrimordial7/dadadadadadadadadadadada.git): "
+IF "%REPO_URL%"=="" set REPO_URL=https://github.com/NoirPrimordial7/dadadadadadadadadadadada.git
 IF NOT "%REPO_URL%"=="" (
     echo Cloning the repository: %REPO_URL%
     git clone %REPO_URL%
@@ -107,4 +108,5 @@ if exist train.py (
 echo.
 echo ===============================
 echo Setup complete! You are ready to go.
-echo =============================== 
+echo ===============================
+pause
