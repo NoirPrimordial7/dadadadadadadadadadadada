@@ -1,0 +1,14 @@
+train: C:/projects/Floor Planner/v1/FloorPlan_Project.v1-v1.yolov8/train/images
+val: C:/projects/Floor Planner/v1/FloorPlan_Project.v1-v1.yolov8/val/images
+test: C:/projects/Floor Planner/v1/FloorPlan_Project.v1-v1.yolov8/test/images
+
+
+nc: 7
+names: ['Door', 'Opening', 'Openings', 'OuterWall', 'Wall', 'Window', 'window']
+
+roboflow:
+  workspace: floor-planner
+  project: floorplan_project-ektgw
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/floor-planner/floorplan_project-ektgw/1
